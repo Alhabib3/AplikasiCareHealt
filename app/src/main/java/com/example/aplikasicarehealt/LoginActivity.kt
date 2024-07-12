@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.aplikasicarehealt.HalamanUtamaActivity
 import com.example.aplikasicarehealt.MainActivity
 import com.example.aplikasicarehealt.RegisterActivity
 import com.google.firebase.database.*
@@ -55,9 +56,9 @@ class LoginActivity : AppCompatActivity() {
                                     "Login Berhasil",
                                     Toast.LENGTH_SHORT
                                 ).show()
-                                val mainIntent = Intent(this@LoginActivity, MainActivity::class.java)
+                                val mainIntent = Intent(this@LoginActivity, HalamanUtamaActivity::class.java)
                                 startActivity(mainIntent)
-                                finish()
+                                finish() // Optional: menutup activity login setelah berhasil login
                             } else {
                                 Toast.makeText(
                                     applicationContext,
