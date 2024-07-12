@@ -5,6 +5,7 @@ import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
+
 class HalamanUtamaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +21,6 @@ class HalamanUtamaActivity : AppCompatActivity() {
         val fragment = Fragment() // Ganti dengan fragment yang sesuai
         fragmentTransaction.replace(fragmentContainer.id, fragment)
         fragmentTransaction.commit()
+        // Isi dengan logika atau tampilan halaman utama Anda
     }
 }

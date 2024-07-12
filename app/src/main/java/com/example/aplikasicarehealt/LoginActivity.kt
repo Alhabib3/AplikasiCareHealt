@@ -58,6 +58,7 @@ class LoginActivity : AppCompatActivity() {
                                 ).show()
                                 val mainIntent = Intent(this@LoginActivity, HalamanUtamaActivity::class.java)
                                 startActivity(mainIntent)
+                                finish() // Optional: menutup activity login setelah berhasil login
                             } else {
                                 Toast.makeText(
                                     applicationContext,
