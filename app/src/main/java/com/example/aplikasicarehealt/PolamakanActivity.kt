@@ -6,34 +6,36 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class PolatidurActivity : AppCompatActivity() {
+class PolamakanActivity : AppCompatActivity() {
 
-    private lateinit var btnJadwalTidur: Button
-    private lateinit var btnPolaTidur: Button
-    private lateinit var btnRiwayatTidur: Button
+    private lateinit var progressBar: ProgressBar
+    private lateinit var btnJadwalMakan: Button
+    private lateinit var btnPanduanSehat: Button
+    private lateinit var btnRiwayatMakan: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_pola_tidur)
+        setContentView(R.layout.fragment_pola_makan)
 
-        btnJadwalTidur = findViewById(R.id.btn_jadwal_tidur)
-        btnPolaTidur = findViewById(R.id.btn_pola_tidur)
-        btnRiwayatTidur = findViewById(R.id.btn_riwayat_tidur)
+        progressBar = findViewById(R.id.nutrition_progress)
+        btnJadwalMakan = findViewById(R.id.btn_jadwal_makan)
+        btnPanduanSehat = findViewById(R.id.btn_panduan_sehat)
+        btnRiwayatMakan = findViewById(R.id.btn_riwayat_makan)
 
-        btnJadwalTidur.setOnClickListener {
+        btnJadwalMakan.setOnClickListener {
             // Handle button click
         }
 
-        btnPolaTidur.setOnClickListener {
+        btnPanduanSehat.setOnClickListener {
             // Handle button click
         }
 
-        btnRiwayatTidur.setOnClickListener {
+        btnRiwayatMakan.setOnClickListener {
             // Handle button click
         }
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+        bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
                     // Handle home navigation
