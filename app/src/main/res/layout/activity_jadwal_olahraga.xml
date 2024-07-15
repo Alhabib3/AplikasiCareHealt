@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Bagian Profil -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/gambar_profil"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_user" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/gambar_profil"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nama_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dulce Alsyawila"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/jenis_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tujuan_profil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meningkatkan massa otot"
+                    android:textSize="12sp"
+                    android:textColor="#888888" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/pengaturan_profil"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_settings" />
+        </RelativeLayout>
+
+        <!-- Bagian Olahraga -->
+        <RelativeLayout
+            android:id="@+id/bagian_olahraga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/judul_olahraga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Olahraga !"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/label_langkah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judul_olahraga"
+                android:layout_marginTop="8dp"
+                android:text="Langkah"
+                android:textSize="14sp" />
+
+            <!-- ProgressBar untuk Langkah -->
+            <ProgressBar
+                android:id="@+id/progress_langkah"
+                android:layout_width="161dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/label_langkah"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:progress="30"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_bar_states"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+            <TextView
+                android:id="@+id/kalori_terbakar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_langkah"
+                android:layout_marginTop="8dp"
+                android:text="Kalori Terbakar"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/nilai_kalori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kalori_terbakar"
+                android:layout_marginTop="4dp"
+                android:text="0kkal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryColor" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/nilai_kalori"
+                android:layout_marginStart="16dp"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:layout_centerVertical="true">
+
+                <Button
+                    android:id="@+id/tombol_jadwal"
+                    android:layout_width="170dp"
+                    android:layout_height="44dp"
+                    android:text="+ Jadwal olahraga"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@color/colorOnPrimary" />
+
+                <Button
+                    android:id="@+id/tombol_riwayat"
+                    android:layout_width="170dp"
+                    android:layout_height="44dp"
+                    android:text="+ Riwayat olahraga"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="8dp"
+                android:text="History"
+                android:textColor="#505050"
+                android:textSize="12sp"
+                android:textStyle="poppins"/>
+        </RelativeLayout>
+
+        <!-- Bagian Tujuan Kesehatan -->
+        <TextView
+            android:id="@+id/tujuan_kesehatan_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tujuan Kesehatanmu"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Navigasi Bawah -->
+        <GridLayout
+            android:id="@+id/tujuan_kesehatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp">
+
+            <!-- Item tujuan kesehatan individu -->
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:src="@drawable/ic_badan_ideal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Menjaga Berat Badan Ideal"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:src="@drawable/ic_menurunkan_bb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Menurunkan berat badan"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:src="@drawable/ic_meningkatkan_mo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Meningkatkan Massa Otot"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:src="@drawable/ic_pencegahan_db" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Pencegahan Diabetes"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:src="@drawable/ic_penurunan_kk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Penurunan Kadar Kolesterol"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="88dp"
+                android:layout_height="75dp"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:src="@drawable/ic_pencegahan_hp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:paddingTop="4dp"
+                    android:text="Pencegahan Hipertensi"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+            </FrameLayout>
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="378dp"
+            android:layout_height="152dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="100dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menu"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_pesan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pesan"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorite"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profil"
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

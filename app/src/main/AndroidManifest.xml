@@ -35,6 +35,9 @@
 
         <activity android:name=".PolamakanActivity" />
 
+        <activity android:name=".JadwalOlahragaActivity"/>
+
+
 
     </application>
 

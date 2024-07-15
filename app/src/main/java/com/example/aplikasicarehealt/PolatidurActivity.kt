@@ -1,8 +1,8 @@
 package com.example.aplikasicarehealt
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -36,23 +36,28 @@ class PolatidurActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Handle home navigation
+                    val intent = Intent(this, HalamanUtamaActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_menu -> {
-                    // Handle menu navigation
+                    val intent = Intent(this, MenuActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_pesan -> {
-                    // Handle pesan navigation
+                    val intent = Intent(this, PesanActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_favorite -> {
-                    // Handle favorite navigation
+                    val intent = Intent(this, FavoriteActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_profil -> {
-                    // Handle profil navigation
+                    val intent = Intent(this, ProfilActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 else -> false

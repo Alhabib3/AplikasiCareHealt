@@ -18,7 +18,7 @@ class PolamakanActivity : AppCompatActivity() {
         setContentView(R.layout.fragment_pola_makan)
 
         progressBar = findViewById(R.id.nutrition_progress)
-        btnJadwalMakan = findViewById(R.id.btn_jadwal_makan)
+        btnJadwalMakan = findViewById(R.id.tombol_jadwal)
         btnPanduanSehat = findViewById(R.id.btn_panduan_sehat)
         btnRiwayatMakan = findViewById(R.id.btn_riwayat_makan)
 
