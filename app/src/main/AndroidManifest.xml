@@ -33,6 +33,9 @@
         <!-- PolatidurActivity -->
         <activity android:name=".PolatidurActivity" />
 
+        <activity android:name=".PolamakanActivity" />
+
+
     </application>
 
 </manifest>

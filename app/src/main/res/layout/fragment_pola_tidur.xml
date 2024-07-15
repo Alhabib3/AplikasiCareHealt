@@ -94,7 +94,7 @@
                     android:src="@drawable/ic_sleep"
                     android:layout_below="@id/sleepDuration"
                     android:layout_marginTop="8dp"
-                    android:layout_alignParentEnd=""/>
+                    android:layout_alignParentEnd="false"/>
             </RelativeLayout>
 
             <!-- Button Bar -->
@@ -263,8 +263,8 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_user"
-                    android:contentDescription="Author Image" />
+                    android:contentDescription="Author Image"
+                    android:src="@drawable/ic_user" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -306,8 +306,8 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_user"
-                    android:contentDescription="Author Image" />
+                    android:contentDescription="Author Image"
+                    android:src="@drawable/ic_user" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"

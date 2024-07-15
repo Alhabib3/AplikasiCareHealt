@@ -2,13 +2,15 @@ package com.millenialzdev.aplikasicarehealt
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aplikasicarehealt.HalamanUtamaActivity
-import com.example.aplikasicarehealt.MainActivity
 import com.example.aplikasicarehealt.RegisterActivity
+import com.example.aplikasicarehealt.R
 import com.google.firebase.database.*
 
 class LoginActivity : AppCompatActivity() {
@@ -21,13 +23,14 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.example.aplikasicarehealt.R.layout.fragment_login_activity)
+        setContentView(R.layout.fragment_login_activity)
 
-        etEmail = findViewById(com.example.aplikasicarehealt.R.id.etEmail)
-        etPassword = findViewById(com.example.aplikasicarehealt.R.id.etPassword)
-        btnRegister = findViewById(com.example.aplikasicarehealt.R.id.btnRegister)
-        btnLogin = findViewById(com.example.aplikasicarehealt.R.id.btnSignIn)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+        btnRegister = findViewById(R.id.btnRegister)
+        btnLogin = findViewById(R.id.btnSignIn)
 
+        // Mendapatkan referensi Firebase Database
         database = FirebaseDatabase.getInstance().getReference("users")
 
         btnRegister.setOnClickListener {
@@ -36,17 +39,26 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btnLogin.setOnClickListener {
-            val username = etEmail.text.toString().trim()
+            val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
-            if (username.isEmpty() || password.isEmpty()) {
+            if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(
                     applicationContext,
                     "Username atau Password kosong!",
                     Toast.LENGTH_SHORT
                 ).show()
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(
+                    applicationContext,
+                    "Format email tidak valid!",
+                    Toast.LENGTH_SHORT
+                ).show()
             } else {
-                database.child(username).addListenerForSingleValueEvent(object : ValueEventListener {
+                // Ganti karakter '.' dengan karakter '_' untuk konsistensi dengan RegisterActivity
+                val safeEmail = email.replace(".", "_")
+
+                database.child(safeEmail).addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         if (snapshot.exists()) {
                             val storedPassword = snapshot.child("password").getValue(String::class.java)
@@ -56,9 +68,12 @@ class LoginActivity : AppCompatActivity() {
                                     "Login Berhasil",
                                     Toast.LENGTH_SHORT
                                 ).show()
+
+                                // Debugging: Log the intent creation
+                                Log.d("LoginActivity", "Navigating to HalamanUtamaActivity")
+
                                 val mainIntent = Intent(this@LoginActivity, HalamanUtamaActivity::class.java)
                                 startActivity(mainIntent)
-                                finish() // Optional: menutup activity login setelah berhasil login
                             } else {
                                 Toast.makeText(
                                     applicationContext,
