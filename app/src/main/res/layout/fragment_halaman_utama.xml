@@ -55,7 +55,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="8dp"
-                    android:background="@android:color/darker_gray"
+                    android:background="@android:color/white"
                     android:layout_margin="4dp"
                     android:gravity="center"
                     android:clickable="true"
@@ -80,7 +80,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="8dp"
-                    android:background="@android:color/darker_gray"
+                    android:background="@android:color/white"
                     android:layout_margin="4dp"
                     android:gravity="center"
                     android:clickable="true"
@@ -105,7 +105,7 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:padding="8dp"
-                    android:background="@android:color/darker_gray"
+                    android:background="@android:color/white"
                     android:layout_margin="4dp"
                     android:gravity="center"
                     android:clickable="true"
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="8dp"
-                android:background="@android:color/darker_gray"
+                android:background="@android:color/white"
                 android:layout_marginTop="16dp"
                 android:clickable="true"
                 android:focusable="true">
@@ -293,6 +293,126 @@
                         android:text="Cek Stress"
                         android:textAlignment="center" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ii_jadwal_kontrol"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_jadwalkontrol"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jadwal Kontrol"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ii_kalkulator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_kalkulator"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kalkulator BMI"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_layanan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_layanan"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Layanan"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_obat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_obat"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Obat"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_vitamin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_vitamin"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vitamin"
+                        android:textAlignment="center" />
+                </LinearLayout>+
 
             </GridLayout>
             <FrameLayout

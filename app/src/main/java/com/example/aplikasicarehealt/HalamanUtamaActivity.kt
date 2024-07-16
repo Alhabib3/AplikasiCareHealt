@@ -47,6 +47,18 @@ class HalamanUtamaActivity : AppCompatActivity() {
         cekStressLayout.setOnClickListener {
             openCekStress()
         }
+
+        // Menambahkan listener untuk fitur obat
+        val obatLayout = findViewById<LinearLayout>(R.id.ll_obat)
+        obatLayout.setOnClickListener {
+            openObat()
+        }
+
+        val vitaminLayout = findViewById<LinearLayout>(R.id.ll_vitamin)
+        vitaminLayout.setOnClickListener {
+            openVitamin()
+        }
+
     }
 
     private fun openPolaMakan() {
@@ -65,7 +77,17 @@ class HalamanUtamaActivity : AppCompatActivity() {
     }
 
     private fun openCekStress() {
-        val intent = Intent(this, CekstressActivity::class.java)
+        val intent = Intent(this, CekStresActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openObat() {
+        val intent = Intent(this, ObatActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openVitamin() {
+        val intent = Intent(this, VitaminActivity::class.java)
         startActivity(intent)
     }
 }

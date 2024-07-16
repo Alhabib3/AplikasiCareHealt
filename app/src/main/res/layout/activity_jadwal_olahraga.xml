@@ -165,8 +165,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="History"
                 android:textColor="#505050"
-                android:textSize="12sp"
-                android:textStyle="poppins"/>
+                android:textSize="12sp" />
         </RelativeLayout>
 
         <!-- Bagian Tujuan Kesehatan -->

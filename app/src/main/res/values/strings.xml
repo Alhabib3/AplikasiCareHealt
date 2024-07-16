@@ -2,4 +2,60 @@
     <string name="app_name">Aplikasi CareHealt</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Kembali</string>
+    <string name="cek_stres">Cek Stres</string>
+    <string name="stres_desc">Test ini bisa mengukur tingkat stres dalam dirimu. Hasil dari tes ini akan sangat membantu kamu mengetahui kesehatan mentalmu saat ini.</string>
+    <string name="mulai">Mulai</string>
+    <string name="kembali">Kembali</string>
+    <string name="lanjut">Lanjut</string>
+    <string name="lihat_hasil">Lihat Hasil</string>
+
+    <!-- Strings for step 1 -->
+    <string name="instruksi_stres_step1">Dalam sebulan terakhir, seberapa sering anda...</string>
+    <string name="pertanyaan_1_step1">Dalam sebulan terakhir, seberapa sering Anda merasa bahwa Anda tidak dapat mengendalikan hal-hal yang penting dalam hidup anda ?</string>
+    <string name="pertanyaan_2_step1">Dalam sebulan terakhir, seberapa sering Anda merasa kesal karena sesuatu yang terjadi secara tidak terduga ?</string>
+
+    <!-- Strings for step 2 -->
+    <string name="instruksi_stres_step2">Dalam sebulan terakhir, seberapa sering anda...</string>
+    <string name="pertanyaan_1_step2">Dalam sebulan terakhir, seberapa sering Anda merasa gelisah atau stres ?</string>
+    <string name="pertanyaan_2_step2">Dalam sebulan terakhir, seberapa sering Anda merasa yakin terhadap kemampuan anda dalam menangani masalah pribadi ?</string>
+
+    <!-- Strings for step 3 -->
+    <string name="instruksi_stres_step3">Dalam sebulan terakhir, seberapa sering anda...</string>
+    <string name="pertanyaan_1_step3">Dalam sebulan terakhir, seberapa sering Anda merasa bahwa segala sesuatu berjalan sesuai keinginan Anda ?</string>
+    <string name="pertanyaan_2_step3">Dalam sebulan terakhir, seberapa sering Anda menemukan bahwa Anda tidak dapat mengatasi segala hal yang harus dilakukan ?</string>
+
+    <!-- Strings for step 4 -->
+    <string name="instruksi_stres_step4">Dalam sebulan terakhir, seberapa sering anda...</string>
+    <string name="pertanyaan_1_step4">Dalam sebulan terakhir, seberapa sering Anda mampu mengendalikan hal-hal yang mengganggu dalam hidup Anda ?</string>
+    <string name="pertanyaan_2_step4">Dalam sebulan terakhir, seberapa sering Anda merasa ada berbagai kesulitan yang menumpuk begitu banyak sehingga Anda tidak dapat mengatasinya ?</string>
+
+    <!-- Common strings for radio buttons -->
+    <string name="tidak_pernah">Tidak pernah</string>
+    <string name="jarang">Jarang</string>
+    <string name="kadang_kadang">Kadang-kadang</string>
+    <string name="cukup_sering">Cukup sering</string>
+    <string name="sangat_sering">Sangat sering</string>
+
+
+    <string name="selesai">Selesai</string>
+    <string name="tingkat_stres_kamu">Tingkat stres kamu</string>
+    <string name="stres_desc_hasil">Tingkat stres kamu melebihi kapasitas pada umumnya, mari cegah stres kamu dengan menjaga kesehatan, pola hidup, olahraga, dll.</string>
+
+
+    <!-- Tambahkan array untuk jenis olahraga jika belum ada -->
+    <string-array name="jenis_olahraga_array">
+        <item>Lari</item>
+        <item>Renang</item>
+        <item>Bersepeda</item>
+        <item>Yoga</item>
+    </string-array>
+
+    <!-- Tambahkan array untuk durasi -->
+    <string-array name="durasi_array">
+        <item>30 Menit</item>
+        <item>45 Menit</item>
+        <item>60 Menit</item>
+        <item>90 Menit</item>
+    </string-array>
 </resources>

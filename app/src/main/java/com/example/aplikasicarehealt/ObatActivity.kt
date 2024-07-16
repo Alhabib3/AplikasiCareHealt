@@ -2,38 +2,14 @@ package com.example.aplikasicarehealt
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class PolamakanActivity : AppCompatActivity() {
-
-    private lateinit var progressBar: ProgressBar
-    private lateinit var btnJadwalMakan: Button
-    private lateinit var btnPanduanSehat: Button
-    private lateinit var btnRiwayatMakan: Button
+class ObatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_pola_makan)
-
-        progressBar = findViewById(R.id.nutrition_progress)
-        btnJadwalMakan = findViewById(R.id.tombol_jadwal)
-        btnPanduanSehat = findViewById(R.id.btn_panduan_sehat)
-        btnRiwayatMakan = findViewById(R.id.btn_riwayat_makan)
-
-        btnJadwalMakan.setOnClickListener {
-            // Handle button click
-        }
-
-        btnPanduanSehat.setOnClickListener {
-            // Handle button click
-        }
-
-        btnRiwayatMakan.setOnClickListener {
-            // Handle button click
-        }
+        setContentView(R.layout.activity_obat)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.setOnItemSelectedListener { item ->

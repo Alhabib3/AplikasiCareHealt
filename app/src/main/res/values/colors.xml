@@ -3,6 +3,7 @@
     <color name="primaryColor">#6200EE</color>
     <color name="primaryLightColor">#BB86FC</color>
     <color name="primaryDarkColor">#3700B3</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
     <color name="secondaryColor">#03DAC5</color>
     <color name="secondaryLightColor">#B2DFDB</color>
     <color name="secondaryDarkColor">#00796B</color>
@@ -19,4 +20,8 @@
     <color name="gray">#888888</color>
     <color name="dividerColor">#000000</color>
     <color name="textColor">#505050</color>
+    <color name="blue_500">#2196F3</color> <!-- Tambahkan definisi warna -->
+    <color name="blue_700">#1976D2</color> <!-- Tambahkan definisi warna -->
+    <color name="blue_900">#0D47A1</color> <!-- Tambahkan definisi warna -->
+    <color name="white">#FFFFFF</color> <!-- Tambahkan definisi warna -->
 </resources>

@@ -37,7 +37,9 @@
 
         <activity android:name=".JadwalOlahragaActivity"/>
 
+        <activity android:name=".ObatActivity" />
 
+        <activity android:name=".VitaminActivity" />
 
     </application>
 
