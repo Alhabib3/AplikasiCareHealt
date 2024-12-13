@@ -27,7 +27,7 @@ class RegisterActivity : AppCompatActivity() {
         btnRegister = findViewById(R.id.btnRegister)
 
         // Mendapatkan referensi ke Firebase Realtime Database
-        database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://myapplication-93c88-default-rtdb.firebaseio.com/");
+        database = FirebaseDatabase.getInstance().getReference("users")
 
         btnRegister.setOnClickListener {
             // Mendapatkan nilai dari EditText
@@ -58,8 +58,9 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun saveUserData(email: String, password: String) {
-        // Membuat child baru di Firebase Realtime Database dengan kunci username
-        val userRef = database.child(email.replace(".", "_"))
+        // Membuat child baru di Firebase Realtime Database dengan kunci email
+        val safeEmail = email.replace(".", "_")
+        val userRef = database.child(safeEmail)
         // Menyimpan data pengguna ke dalam child yang sesuai
         userRef.child("email").setValue(email)
         userRef.child("password").setValue(password)
